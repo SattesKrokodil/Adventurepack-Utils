@@ -1,0 +1,6 @@
+{
+  "type": "special",
+  "rarity": "epic",
+  "advancement": "minecraft:nether/distract_piglin",
+  "min_level": 30
+}

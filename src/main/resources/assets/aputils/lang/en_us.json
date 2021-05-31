@@ -1,0 +1,12 @@
+{
+  "aputils.cell.mutation": "Mutation: %s",
+  "aputils.cell.ground": "Transformation: %s",
+  "aputils.cell.aquatic": "Transformation: %s",
+  "aputils.cell.flying": "Transformation: %s",
+  "aputils.cell.special": "Transformation: %s",
+  "aputils.cell.level_requirement": "Requires Level: %s",
+  "aputils.cell.grants": "Grants: %s",
+  "aputils.cell.no_grant": "No Advancement",
+
+  "cell.aputils.murderer": "Murderer"
+}

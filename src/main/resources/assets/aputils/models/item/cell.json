@@ -1,0 +1,38 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "aputils:item/empty_cell"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "mutation": 1
+            },
+            "model": "aputils:item/mutation"
+        },
+        {
+            "predicate": {
+                "aquatic": 1
+            },
+            "model": "aputils:item/aquatic"
+        },
+        {
+            "predicate": {
+                "flying": 1
+            },
+            "model": "aputils:item/flying"
+        },
+        {
+            "predicate": {
+                "ground": 1
+            },
+            "model": "aputils:item/ground"
+        },
+        {
+            "predicate": {
+                "special": 1
+            },
+            "model": "aputils:item/special"
+        }
+    ]
+}
