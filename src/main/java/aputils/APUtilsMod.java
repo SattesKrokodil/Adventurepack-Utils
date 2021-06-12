@@ -20,7 +20,8 @@ public class APUtilsMod implements ModInitializer {
 	public static final String MODID = "aputils";
 	public static final Logger LOGGER = LogManager.getLogger(APUtilsMod.class);
 	public static boolean isExileLoaded = false;
-
+	public static Identifier versionCheckPacketID = new Identifier(MODID, "version_check");
+	
 	public static AdvancementChecker advancementChecker;
 
 	@Override
