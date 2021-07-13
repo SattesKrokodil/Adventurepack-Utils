@@ -1,5 +1,6 @@
 package aputils.cell;
 
+import aputils.util.DataRegistry;
 import com.google.gson.JsonObject;
 import net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder;
 import net.minecraft.util.Identifier;
@@ -12,7 +13,7 @@ import java.util.Locale;
 
 public class Cell {
 
-    public static Registry<Cell> REGISTRY = FabricRegistryBuilder.createSimple(Cell.class, new Identifier("aputils:cell")).buildAndRegister();
+    public static DataRegistry<Cell> REGISTRY = new DataRegistry<>();
 
     private CellType cellType;
     private Rarity rarity;

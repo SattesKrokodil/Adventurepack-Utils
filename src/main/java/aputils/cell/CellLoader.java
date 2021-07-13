@@ -27,10 +27,11 @@ public class CellLoader extends JsonDataLoader implements IdentifiableResourceRe
 
     @Override
     protected void apply(Map<Identifier, JsonElement> loader, ResourceManager manager, Profiler profiler) {
+        Cell.REGISTRY.clear();
         loader.forEach((id, je) -> {
             try {
                 Cell cell = Cell.fromJson(je.getAsJsonObject());
-                Registry.register(Cell.REGISTRY, id, cell);
+                Cell.REGISTRY.register(id, cell);
             } catch(Exception e) {
                 APUtilsMod.LOGGER.error("Couldn't read cell \"" + id.toString() + "\" (skipping): " + e.getMessage());
             }
