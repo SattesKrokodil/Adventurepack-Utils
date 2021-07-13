@@ -1,6 +1,6 @@
 {
   "type": "flying",
   "rarity": "uncommon",
-  "advancement": "minecraft:end/root",
+  "advancement": "adventurepack:transformation_bat",
   "min_level": 30
 }

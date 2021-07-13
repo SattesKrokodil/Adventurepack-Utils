@@ -1,6 +1,6 @@
 {
   "type": "ground",
   "rarity": "rare",
-  "advancement": "minecraft:husbandry/plant_seed",
+  "advancement": "adventurepack:transformation_husk",
   "min_level": 10
 }
