@@ -1,6 +1,6 @@
 {
   "type": "ground",
-  "rarity": "uncommon",
+  "rarity": "common",
   "advancement": "adventurepack:transformation_sheep",
   "min_level": 10
 }
