@@ -4,6 +4,7 @@
   "package": "aputils.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "BoatExploderMixin"
   ],
   "client": [
     "ClientAdvancementManagerAccessor"
