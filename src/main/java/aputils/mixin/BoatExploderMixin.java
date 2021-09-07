@@ -12,7 +12,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 @Mixin(BoatEntity.class)
@@ -21,8 +20,9 @@ public class BoatExploderMixin {
     public void explodeBoat(CallbackInfo ci) {
         BoatEntity boat = (BoatEntity)(Object)this;
         Identifier dimID = boat.world.getRegistryKey().getValue();
-        if (new Random().nextBoolean() && (
-            dimID.toString().equals("mmorpg:dungeon") ||
+        if (new Random().nextBoolean() &&
+            (
+                dimID.toString().equals("mmorpg:dungeon") ||
                 dimID.toString().equals("mmorpg:rift")
             )
         ) {
@@ -30,7 +30,7 @@ public class BoatExploderMixin {
             boat.world.addParticle(
                 ParticleTypes.EXPLOSION,
                 boat.getX() + getRandOffset(),
-                boat.getY() + getRandOffset() + 2,
+                boat.getY() + getRandOffset() + 1.5,
                 boat.getZ() + getRandOffset(),
                 0.0,
                 0.0,
@@ -38,8 +38,8 @@ public class BoatExploderMixin {
             );
             PlayerEntity player = boat.world.getClosestPlayer(boat, 8.0);
             if (player != null) {
-                player.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 160, 1));
-                player.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 160, 1));
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 170, 1));
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 170, 1));
             }
         }
     }
